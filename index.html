@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новостипол</title>
+
+  <link rel="stylesheet" href="css/bootstrap5.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="books container-xl">
+    <header class="py-3 mb-3">
+      <h1 class="mb-0 display-5 text-center fw-bold">Новости</h1>
+    </header>
+
+    <section>
+      <h2 class="visually-hidden">Новости</h2>
+      <form class="js-news-search-form row mb-3" action="https://echo.htmlacademy.ru">
+        <div class="col-md-4">
+          <input class="search-input form-control" type="search" name="search_input" placeholder="Что искать?">
+          <button class="btn btn-success js-load-data mt-3" type="submit">Получать новости</button>
+        </div>
+      </form>
+
+      <div class="row">
+        <ul class="news-list"></ul>
+      </div>
+    </section>
+
+
+    <script src="js/bootstrap5.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+  </html>
