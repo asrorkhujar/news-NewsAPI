@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости</title>
-
+  <title>Новости | JS fetch</title>
   <link rel="stylesheet" href="css/bootstrap5.min.css">
-  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <div class="books container-xl">
-    <header class="py-3 mb-3">
-      <h1 class="mb-0 display-5 text-center fw-bold">Новости</h1>
+  <div class="container">
+    <header class="bg-secondary p-3 rounded text-white text-center text-uppercase">
+      <h1>Новости</h1>
     </header>
-
-    <section>
-      <h2 class="visually-hidden">Новости</h2>
-      <form class="js-news-search-form row mb-3" action="https://echo.htmlacademy.ru">
-        <div class="col-md-4">
-          <input class="search-input form-control" type="search" name="search_input" placeholder="Что искать?">
-          <button class="btn btn-success js-load-data mt-3" type="submit">Получать новости</button>
-        </div>
-      </form>
-
-      <div class="row">
-        <ul class="news-list"></ul>
+    <div class="row">
+      <div class="col-md-4 col-lg-3">
+        <form class="py-4 js-search-form" action="https://newsapi.org/v2/everything" method="GET">
+          <input class="form-control js-search-input" type="search" name="search" placeholder="Получит новости" aria-label="Search" required>
+        </form>
       </div>
-    </section>
+    </div>
+    <div class="row news-list list-group"></div>
+  </div>
 
 
-    <script src="js/bootstrap5.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <template id="news-item-template">
+    <div class="mb-4 col-md-4 col-lg-3">
+      <div class="bg-white shadow-sm rounded p-2 h-100">
+        <a class="list-group-item list-group-item-action" href="" target="_blank">
+          <img class="img-fluid rounded news-img" height="150"
+          src=""
+          alt="" width="">
+          <div class="py-3 px-2">
+            <h3 class="news-title h6"></h3>
+            <div class="d-flex justify-content-between">
+              <!-- <p class="news-author"></p> -->
+              <p class="text-warning"></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </template>
 
-  </html>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
